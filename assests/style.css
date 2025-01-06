@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.custom-navbar{
+    background-color: #2e2665;
+    /* background-color: #1e2046; */
+    /* background-color: #17183a; */
+    color: white !important;
+    --bs-navbar-color:white;
+    --bs-navbar-brand-color: white;
+    --bs-navbar-brand-hover-color: #e9427a;
+    --bs-navbar-hover-color: #e9427a;
+    --bs-navbar-disabled-color: white;
+    --bs-navbar-active-color: white;
+    --bs-nav-link-color:#e9427a;
+}
+..custom-navbar a:hover{
+    color: #e9427a;
+}
+.custom-div {
+    background-image: url('./who-we-are-bg-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    color: black;
+}
+.custom-div p {
+    margin: 0;
+    font-size: 1.2rem; /* Adjust text size as needed */
+    word-wrap: break-word;
+    text-align: center;
+}
+.main-text{
+width: 35%;
+}
+.custom-btn{
+    background-color: #F1E412;
+}
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .image-container img {
+    height: 60vh;
+    object-fit: cover;
+    width: 100%;
+  }
+  .text-container {
+    height: 60vh;
+    overflow-y: scroll;
+    padding: 10px;
+    border-left: 1px solid #ddd;
+  }
+  .text-container p {
+    scroll-snap-align: start;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .text-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Light gray background */
+  }
+  .ecosystem{
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F4EB;
+    align-items: center;
+  }
+  .ecosystem-title{
+    font-weight: bold;
+  }
+  .ecosystem-image img{
+height: 70vh;
+  }
+  .offering-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .offering-row h1 {
+    width: 100%;
+    text-align: center;
+    margin: 0.6em 0;
+    font-size: 2em;
+    font-weight: 600;
+    color: #070024;
+  }
+
+  .offering-row .offering-column {
+    padding: 1em;
+  }
+
+  .offering-row .offering-column .offering-card {
+    padding: 3.1em 1.25em;
+    text-align: center;
+    background: linear-gradient(0deg, #397ef6 10px, transparent 10px);
+    background-repeat: no-repeat;
+    background-position: 0 0.62em;
+    cursor: pointer;
+    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+  }
+
+  .offering-row .offering-column .offering-card:hover {
+    background-position: 0;
+  }
+
+  .offering-row .offering-column .offering-card .offering-icon {
+    font-size: 2.5em;
+    height: 2em;
+    width: 2em;
+    margin: auto;
+    background: #397ef6;
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+
+  .offering-row .offering-column .offering-card .offering-icon::before {
+    position: absolute;
+    content: "";
+    height: 1.5em;
+    width: 1.5em;
+    border: 0.12em solid #397ef6;
+    transition: 0.5s;
+    border-radius: 50%;
+  }
+
+  .offering-row .offering-column .offering-card:hover .offering-icon::before {
+    height: 2.5em;
+    width: 2.5em;
+  }
+
+  .offering-row .offering-column .offering-card h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 1em 0 1.4em 0;
+    letter-spacing: 0.3px;
+  }
+
+  .offering-row .offering-column .offering-card p {
+    line-height: 2em;
+    color: #625a71;
+  }
+
+  @media (min-width: 768px) {
+    section {
+      padding: 1em 7em;
+    }
+
+    section .offering-row .offering-column {
+      padding: 0 0.5em;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    section .offering-row .offering-column .offering-card {
+      padding: 3em 1em;
+    }
+  }

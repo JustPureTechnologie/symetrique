@@ -1,0 +1,140 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #3498db;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.input-item {
+    width: 48%;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Terms and Privacy Text */
+.terms-text {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.terms-text a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.terms-text a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright Text */
+.copyright-text {
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .input-item {
+        width: 100%;
+    }
+}
