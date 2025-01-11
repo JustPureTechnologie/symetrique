@@ -88,7 +88,7 @@ width: 35%;
     align-items: center;
   }
   .ecosystem-title{
-    font-weight: bold;
+    font-size: 1.7rem;
   }
   .ecosystem-image img{
 height: 70vh;
@@ -179,6 +179,9 @@ height: 70vh;
     margin: 0;  /* Remove any unwanted margin to maintain consistent spacing */
     padding: 0; /* Remove padding to ensure consistency */
     flex-grow: 1;  /* Ensure the paragraph grows to take up remaining space in the card */
+  }
+  .offering-row h1{
+    font-size: 2rem;
   }
   
   @media (min-width: 768px) {
