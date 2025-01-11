@@ -1,9 +1,4 @@
-* {
-  
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
 .custom-navbar{
   
     background-color: #2e2665;
@@ -28,10 +23,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background-color: #f7f7f7;
-    padding: 20px;
-}
 
 .container {
     max-width: 1200px;
