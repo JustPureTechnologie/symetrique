@@ -51,6 +51,7 @@ width: 35%;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: 0;
   }
   .image-container img {
     height: 60vh;      
@@ -70,10 +71,9 @@ width: 35%;
   font-size: 2.2em;
 }
 .text-container p {
-  color: #2e2665;  /* Paragraph color */
   scroll-snap-align: start;
   margin-bottom: 20px;
-  font-size: 1.6em;  /* Increased font size for the paragraph */
+  font-size: 1em;  
 }
 
 .text-container::-webkit-scrollbar-track {
