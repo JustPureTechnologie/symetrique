@@ -19,7 +19,7 @@
     --bs-navbar-active-color: white;
     --bs-nav-link-color:#e9427a;
 }
-..custom-navbar a:hover{
+.custom-navbar a:hover{
     color: #e9427a;
 }
 .custom-div {
@@ -53,24 +53,34 @@ width: 35%;
     height: 100vh;
   }
   .image-container img {
-    height: 60vh;
+    height: 60vh;      
     object-fit: cover;
     width: 100%;
   }
   .text-container {
-    height: 60vh;
-    overflow-y: scroll;
-    padding: 10px;
-    border-left: 1px solid #ddd;
-  }
-  .text-container p {
-    scroll-snap-align: start;
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-  .text-container::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Light gray background */
-  }
+  height: 60vh;
+  overflow-y: scroll;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+}
+
+.text-container b{
+  color: #2e2665;
+  font-weight: bold;
+  font-size: 2.2em;
+}
+.text-container p {
+  color: #2e2665;  /* Paragraph color */
+  scroll-snap-align: start;
+  margin-bottom: 20px;
+  font-size: 1.6em;  /* Increased font size for the paragraph */
+}
+
+.text-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light gray background */
+}
+
+  
   .ecosystem{
     display: flex;
     flex-direction: column;
@@ -83,25 +93,32 @@ width: 35%;
   .ecosystem-image img{
 height: 70vh;
   }
+
+
+  /* offering-card section */
+
   .offering-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;  /* Center the content horizontally */
+    text-align: center;       /* Ensure the heading text is centered */
   }
-
-  .offering-row h1 {
-    width: 100%;
-    text-align: center;
-    margin: 0.6em 0;
-    font-size: 2em;
-    font-weight: 600;
-    color: #070024;
-  }
-
+  
   .offering-row .offering-column {
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 25%;  /* Flex properties to ensure the cards maintain equal width */
   }
-
+  
   .offering-row .offering-column .offering-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  /* Center all items horizontally */
+    min-height: 500px;     /* Ensure all cards have the same minimum height */
+    height: 100%;          /* Ensure cards grow based on content, but don't shrink */
     padding: 3.1em 1.25em;
     text-align: center;
     background: linear-gradient(0deg, #397ef6 10px, transparent 10px);
@@ -110,12 +127,16 @@ height: 70vh;
     cursor: pointer;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;  /* Ensure there is no extra margin affecting alignment */
   }
-
+  
   .offering-row .offering-column .offering-card:hover {
     background-position: 0;
   }
-
+  
   .offering-row .offering-column .offering-card .offering-icon {
     font-size: 2.5em;
     height: 2em;
@@ -127,7 +148,7 @@ height: 70vh;
     display: grid;
     place-items: center;
   }
-
+  
   .offering-row .offering-column .offering-card .offering-icon::before {
     position: absolute;
     content: "";
@@ -136,37 +157,134 @@ height: 70vh;
     border: 0.12em solid #397ef6;
     transition: 0.5s;
     border-radius: 50%;
-  }
-
-  .offering-row .offering-column .offering-card:hover .offering-icon::before {
+  } 
+   .offering-row .offering-column .offering-card:hover .offering-icon::before {
     height: 2.5em;
     width: 2.5em;
   }
-
+  
   .offering-row .offering-column .offering-card h3 {
     font-size: 1.3em;
     font-weight: 600;
-    margin: 1em 0 1.4em 0;
+    margin: 0.5em 0;  /* Reduced margin for consistent alignment */
+    padding-bottom: 1em;  /* Added bottom padding to create space below the heading */
     letter-spacing: 0.3px;
+    text-align: center; /* Center the heading */
   }
-
+  
   .offering-row .offering-column .offering-card p {
     line-height: 2em;
     color: #625a71;
+    text-align: center;  /* Ensure the paragraph is centered */
+    margin: 0;  /* Remove any unwanted margin to maintain consistent spacing */
+    padding: 0; /* Remove padding to ensure consistency */
+    flex-grow: 1;  /* Ensure the paragraph grows to take up remaining space in the card */
   }
-
+  
   @media (min-width: 768px) {
     section {
       padding: 1em 7em;
     }
-
+  
     section .offering-row .offering-column {
       padding: 0 0.5em;
       flex: 0 0 25%;
       max-width: 25%;
     }
-
+  
     section .offering-row .offering-column .offering-card {
       padding: 3em 1em;
     }
   }
+
+  /* footer css */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    width: 30%;
+  }
+  
+  .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f8c46b;
+    border-bottom: 2px solid #f8c46b;
+    padding-bottom: 5px;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+    color: #f8c46b;
+  }
+  
+  .footer-section ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  footer .footer-container div {
+    background: linear-gradient(135deg, #333, #333);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* footer .footer-container div:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  } */
+  
+  /* Horizontal Rule Style */
+  .footer-hr {
+    border: 0;
+    border-top: 2px solid #f8c46b;
+    margin: 30px 0;
+  }
+  
+  /* Footer Rights Text Style */
+  .footer-rights {
+    text-align: center;
+    font-size: 14px;
+    color: #f8c46b;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
