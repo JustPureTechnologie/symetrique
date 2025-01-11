@@ -13,6 +13,23 @@
 
     <!-- Custom CSS -->
     <style>
+        .custom-navbar{
+  
+  background-color: #2e2665;
+  /* background-color: #1e2046; */
+  /* background-color: #17183a; */
+  color: white !important;
+  --bs-navbar-color:white;
+  --bs-navbar-brand-color: white;
+  --bs-navbar-brand-hover-color: #e9427a;
+  --bs-navbar-hover-color: #e9427a;
+  --bs-navbar-disabled-color: white;
+  --bs-navbar-active-color: white;
+  --bs-nav-link-color:#e9427a;
+}
+.custom-navbar a:hover{
+  color: #e9427a;
+}
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -121,7 +138,43 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-
+    <div>
+        <nav class="navbar sticky-top navbar-expand-lg custom-navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="./assests/images/logo.png" alt="Logo" width="100" height="50"
+                class="d-inline-block align-text-top" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Solutions</a> 
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Expertise</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./blogs.html">Resources</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact Us</a>
+                </li>
+    
+              </ul>
+            </div>
+          </div>
+        </nav>
+    
     <div class="container">
         <h1><span class="contact-text">Contact</span> <span class="us-text">Us</span></h1>
         <form action="#" method="POST" class="contact-form">
