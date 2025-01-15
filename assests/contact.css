@@ -1,3 +1,20 @@
+.custom-navbar{
+  
+    background-color: #2e2665;
+    /* background-color: #1e2046; */
+    /* background-color: #17183a; */
+    color: white !important;
+    --bs-navbar-color:white;
+    --bs-navbar-brand-color: white;
+    --bs-navbar-brand-hover-color: #e9427a;
+    --bs-navbar-hover-color: #e9427a;
+    --bs-navbar-disabled-color: white;
+    --bs-navbar-active-color: white;
+    --bs-nav-link-color:#e9427a;
+}
+.custom-navbar a:hover{
+    color: #e9427a;
+}
 /* Global Reset */
 * {
     margin: 0;

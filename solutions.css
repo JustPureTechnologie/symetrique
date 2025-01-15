@@ -1,0 +1,294 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+ /* Solutions Section */
+.solutions {
+  background-color: #fff;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* Header Styling */
+.solutions-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.solutions-header h2 {
+  font-size: 3rem;
+  color: #03567F;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-out;
+}
+
+.solutions-header p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Solution Cards Container */
+.solutions-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Make cards wider */
+  gap: 40px;
+  max-height: 100%;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+/* Solution Card Styling (Horizontal Layout) */
+.solution-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.solution-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Wrapper */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 200px; /* Increase the width of the image */
+  height: 150px; /* Fix height of image */
+  border-radius: 10px;
+}
+
+.solution-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.solution-card:hover .solution-image {
+  transform: scale(1.1);
+}
+
+/* Solution Info Styling */
+.solution-info {
+  flex-grow: 1;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.solution-info h3 {
+  font-size: 2rem;
+  color: #03567F;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.solution-info p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Call to Action Button */
+.cta-button {
+  background-color: #079B7E;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2ECC71;
+  transform: scale(1.05);
+}
+
+/* Custom Scrollbar */
+.solutions-cards::-webkit-scrollbar {
+  width: 12px;
+}
+
+.solutions-cards::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.solutions-cards::-webkit-scrollbar-thumb {
+  background: #03567F;
+  border-radius: 10px;
+}
+
+.solutions-cards::-webkit-scrollbar-thumb:hover {
+  background: #2ECC71;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .solutions-header h2 {
+    font-size: 2rem;
+  }
+
+  .solutions-header p {
+    font-size: 1rem;
+  }
+
+  .solutions-cards {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+  }
+
+  .solution-card {
+    flex-direction: column; /* Stack content vertically on mobile */
+  }
+
+  .solution-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .solution-info p {
+    font-size: 1rem;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 200px; /* Make image height bigger on mobile */
+  }
+}
+
+
+
+
+
+/* Timeline Section */
+/* Timeline Section */
+.timeline {
+  background-color: #fff;
+  padding: 80px 40px; /* Added 40px padding on the left and right */
+  margin: 0 auto; /* Center the content */
+  max-width: 1200px; /* Optionally limit the maximum width of the section */
+}
+
+.timeline-header h2 {
+  font-size: 2.5rem;
+  color: #03567F;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.timeline-header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Timeline Items */
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Individual Timeline Item */
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.timeline-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.timeline-image {
+  flex: 0 0 50%; /* 50% width for image */
+}
+
+.timeline-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.timeline-content {
+  flex: 0 0 50%; /* 50% width for content */
+  text-align: left;
+}
+
+.timeline-content h3 {
+  font-size: 1.8rem;
+  color: #03567F;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Horizontal Line */
+hr {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 40px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-header h2 {
+    font-size: 2rem;
+  }
+
+  .timeline-header p {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-image {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+  }
+
+  .timeline-content {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+  }
+}

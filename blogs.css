@@ -1,0 +1,156 @@
+
+.custom-navbar{
+  
+    background-color: #2e2665;
+    /* background-color: #1e2046; */
+    /* background-color: #17183a; */
+    color: white !important;
+    --bs-navbar-color:white;
+    --bs-navbar-brand-color: white;
+    --bs-navbar-brand-hover-color: #e9427a;
+    --bs-navbar-hover-color: #e9427a;
+    --bs-navbar-disabled-color: white;
+    --bs-navbar-active-color: white;
+    --bs-nav-link-color:#e9427a;
+}
+.custom-navbar a:hover{
+    color: #e9427a;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading {
+    font-size: 3em;
+    color: #2e3a59;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: #2e3a59;
+    border-radius: 10px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #7268b4, #4e477c);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s ease;
+}
+
+.card:hover::before {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.card-content {
+    z-index: 1;
+}
+
+.card-content h3 {
+    color: #1c1c1c;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-content .date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-content h4 {
+    font-size: 1.3em;
+    color: #0e0d0d;
+    margin: 15px 0;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.card-content h4:hover {
+    color: #181716;
+}
+
+.card-content p {
+    color: #000000;
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.card-content .tags {
+    font-size: 0.85em;
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #ff9b9b;
+    text-decoration: underline;
+}

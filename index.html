@@ -9,33 +9,33 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="./assests/style.css" />
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
-  <div>
+ 
     <nav class="navbar sticky-top navbar-expand-lg custom-navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="./assests/images/logo.png" alt="Logo" width="100" height="50"
-            class="d-inline-block align-text-top" />
+          <img src="./assests/images/logooo.PNG" alt="Logo" width="100" height="50" class="d-inline-block align-text-top" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <!-- Centering the links -->
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Solutions</a> 
+              <a class="nav-link" href="./solutions.html">Solutions</a> 
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Expertise</a>
+              <a class="nav-link" href="./expertise.html">Expertise</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="./AboutUs.html">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./blogs.html">Resources</a>
@@ -43,66 +43,118 @@
             <li class="nav-item">
               <a class="nav-link" href="./contact.html">Contact Us</a>
             </li>
-       
-
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class=" section-container">
-      <div class="row w-100">
-        <!-- Left Side -->
-        <div class="col-6 image-container">
-          <img src="./assests/images/RWE.jpg" alt="Placeholder Image">
-        </div>
-        <!-- Right Side -->
-        <div class="col-6 text-container scrollBar">
-          <div>
-            <b>Real World Data </b>
-            <p>Data collected in real world in support of many use cases such as to understand the patient and
-              diagnostics journey, to determine the patient population Size, to support the regulatory submissions, to
-              provide decision support based on facts and data in the lifecycle of the drug </p>
+    <div>
+<!-- slideshow section -->
+   
+    <div class="slideshow-container">
+      <div class="slide" style="background-image: url('./assests/images/ai.jpg');">
+          <div class="overlay"></div>
+          <div class="text">
+              <h1><strong>The Power of Real World Data (RWD)</strong> </h1>
+<p>Real World Data (RWD) is revolutionizing healthcare by providing critical insights into patient care, treatment outcomes, and healthcare efficiencies. It is generated from daily interactions across the healthcare ecosystem, including EHRs, claims data, and wearable devices.</p>
+              <button>Learn More</button>
           </div>
-          <div>
-            <b>Real World Evidence</b>
-            <p> Draw the specific evidence for the use case based on the real world data such as claims, EHR, Patient
-              registries, and many other data sets. Create the insights based on the Real world data to support the
-              decisions. </p>
+      </div>
+      <div class="slide" style="background-image: url('./assests/images/ai1.jpg');">
+          <div class="overlay"></div>
+          <div class="text">
+              <h1><strong>Comprehensive Health Insights</strong></h1>
+<p>By capturing data from diverse sources like patient visits and health monitoring devices, RWD offers a holistic view of patient health. This wealth of information supports informed decision-making and drives improvements in healthcare delivery and outcomes.</p>              <button>Discover More</button>
           </div>
-          <div>
-            <p>Symetrique has experience in many facets of the RWD and RWE and technical expertise to accelerate the RWE
-              based decision making for many use cases such as optimizing the clinical trials, estimating the disease
-              landscape, gain approval from payers on therapy,demonstrating real world safety and effectiveness of the
-              drug, and supporting commercial analytics</p>
+      </div>
+      <div class="slide" style="background-image: url('./assests/images/pic1.jpeg');">
+          <div class="overlay"></div>
+          <div class="text">
+              <h1><strong>Essential Data Sources in Healthcare</strong></h1>
+<p>Key sources like Electronic Health Records (EHR), claims data, patient registries, wearables, and drug data collectively provide a robust framework for tracking patient care, health outcomes, and treatment effectiveness, driving better healthcare insights and decisions.</p>              <button>Explore Now</button>
           </div>
-        </div>
       </div>
-    </div>
+      <div class="slide" style="background-image: url('./assests/images/pic4.jpg');">
+          <div class="overlay"></div>
+          <div class="text">
+              <h1><strong>Harnessing Real World Evidence (RWE)</strong></h1>
+<p>Real World Evidence (RWE) transforms Real World Data into actionable insights, supporting FDA approvals, health economics research, and market analysis, driving informed healthcare decisions.</p>            
+  <button>Join Us</button>
+          </div>
+      </div>
+      <div class="slide" style="background-image: url('./assests/images/pic5.jpg');">
+          <div class="overlay"></div>
+          <div class="text">
+              <h1><strong>Symetrique: Driving Data-Driven Healthcare Solutions</strong></h1>
+             <p> Symetrique excels in integrating complex data sets, empowering healthcare stakeholders with insights that enhance patient outcomes, streamline strategies, and foster innovation in healthcare. </p>
+               <button>Get Involved</button>
+          </div>
+      </div>
+  </div>
+      <script src="IndexScript.js"></script>
+   
 
-    <div class="ecosystem">
-      <div class="ecosystem-title">
-        Data Ecosystem - Real World Data Sources
-
-      </div>
-      <div class="ecosystem-image">
-        <img src="./assests/images/dataecosystem.png" alt="">
-      </div>
-    </div>
-
-    <div class="custom-div">
-      <div class="main-text">
-        <p class="flex-grow-1">
-          Accelerate decisions by generating Real World Evidence using
-          Symetrique AI platform
-        </p>
-      </div>
-      <div>
-        <button class="btn custom-btn">Schedule a demo</button>
-      </div>
-    </div>
     
+        <div class="container">
+          <!-- Heading and Paragraph Section -->
+          <div class="center-content">
+            <h1 class="main-heading">Gathering Real-World Data (RWD) and generating Real-World Evidence (RWE) can be time-consuming and inefficient.</h1>
+            <p class="main-paragraph">At Symetrique, we are committed to addressing this challenge head-on. By harnessing the power of Artificial Intelligence (AI) and Machine Learning (ML), we streamline the process of collecting and analyzing RWD and RWE. These advanced technologies enable us to:</p>
+            <hr class="sectionn-divider">
+          </div>
+      
+          <!-- Rectangle Section 1 -->
+          <div class="rectangle-container">
+            <div class="rectangle">
+              <h2 class="rectangle-heading">Accelerate Data Collection</h2>
+              <p class="rectangle-paragraph">AI algorithms can process vast amounts of real-world data in record time, identifying patterns and insights that manual methods might miss.</p>
+            </div>
+            <hr class="section-divider">
+          </div>
+      
+          <!-- Rectangle Section 2 -->
+          <div class="rectangle-container">
+            <div class="rectangle">
+              <h2 class="rectangle-heading">Enhance Predictive Analysis</h2>
+              <p class="rectangle-paragraph">ML models allow us to predict outcomes and optimize study designs, reducing the time and resources required for trials.</p>
+            </div>
+            <hr class="section-divider">
+          </div>
+      
+          <!-- Rectangle Section 3 -->
+          <div class="rectangle-container">
+            <div class="rectangle">
+              <h2 class="rectangle-heading">Improve Decision-Making</h2>
+              <p class="rectangle-paragraph">By providing accurate, real-time insights, we empower stakeholders to make data-driven decisions quickly and confidently.</p>
+            </div>
+            <hr class="section-divider">
+          </div>
+        </div>
+   
+<!-- third page -->  <!-- Hero Section -->
 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlocking the Power of Real World Evidence in Healthcare</h1>
+      <p>Transforming Data into Insight for Better Patient Outcomes</p>
+      <a href="https://docs.google.com/document/d/1Kt7vQnTrvyOV1QpbK4RpgGjhJ-rX4H2gDBNj4emwpP0/edit?usp=sharing" class="cta-button">Learn More</a>
+    </div>
+</section>
+
+<!-- blog section -->
+  <!-- Blog Link Section -->
+  <section class="blog">
+    <h2>Dive Deeper into Real World Evidence</h2>
+    <p>To explore more, check out our latest blog post.</p>
+    <a href="https://docs.google.com/document/d/1Kt7vQnTrvyOV1QpbK4RpgGjhJ-rX4H2gDBNj4emwpP0/edit?usp=sharing" class="cta-button">Read the Blog</a>
+  </section>
+
+
+
+
+
+
+  <!-- offerings sect -->
     <section>
       <div class="offering-row">
         <h1>Our Offerings</h1>
@@ -189,9 +241,11 @@
         <div class="footer-section">
           <h3>Tags</h3>
           <ul>
-            <li><a href="#">Real World Evidence </a></li>
-            <li><a href="#">Real World Data</a></li>
-            <li><a href="#">Our Offerings</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">SEO</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">UX/UI</a></li>
           </ul>
         </div>
       </div>
@@ -199,7 +253,7 @@
       <hr class="footer-hr">
     </footer>
     
-  
+    
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
