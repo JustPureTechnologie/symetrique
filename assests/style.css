@@ -13,21 +13,28 @@ html, body {
   height: 100%;
 }
 
+/* Make sure the background image takes up full screen */
+body {
+  background: url('./path/to/your/image.jpg') no-repeat center center fixed;
+  background-size: cover; /* Cover the entire page */
+  height: 100vh; /* Full viewport height */
+}
 
 /* Navbar customization */
 .custom-navbar {
-  color: e9427a !important;
-  background-color: white !important;
-  /* --bs-navbar-color: white; */
+  background-color: rgba(46, 38, 101, 0); /* Transparent navbar */
+  color: white !important;
+  --bs-navbar-color: white;
   --bs-navbar-brand-color: white;
   --bs-navbar-brand-hover-color: #e9427a;
   --bs-navbar-hover-color: #e9427a;
   --bs-navbar-disabled-color: white;
   --bs-navbar-active-color: white;
   --bs-nav-link-color: #e9427a;
-  /* position: absolute; Keep the navbar on top of the background */
+  position: absolute; /* Keep the navbar on top of the background */
   width: 100%; /* Ensure the navbar stretches across the full width */
   z-index: 9999; /* Make sure the navbar stays above everything else */
+  /* backdrop-filter: blur(10px); Optional: Adds a blur effect to the transparent navbar */
 }
 
 /* Ensure there's no white space above the navbar */

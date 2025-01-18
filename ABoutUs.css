@@ -1,0 +1,169 @@
+/* About Us Section Styling */
+.about-us {
+    padding: 100px 20px; /* Add padding from the outer edges of the page */
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-left,
+  .about-image {
+    width: 48%; /* Take up 50% of the width for left and right sections */
+    padding: 20px;
+  }
+  
+  .about-left h1 {
+    font-size: 3rem;
+    color: #03567F;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .about-left p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    text-align: justify; /* Justify the text for better readability */
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Add a little border-radius for a smooth edge */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column; /* Stack the content on smaller screens */
+      align-items: center;
+    }
+  
+    .about-left,
+    .about-image {
+      width: 100%; /* Take up full width on smaller screens */
+      text-align: center; /* Center align text for better layout */
+      padding: 15px;
+    }
+  
+    .about-left h1 {
+        text-align: center;
+        align-items: center;
+      font-size: 2.5rem;
+      
+    }
+  
+    .about-left p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  
+
+/* Why Choose Us Section Styling */
+.why-choose-us {
+  padding: 100px 20px;
+  background-color: #f5f9fc; /* Light background color for contrast */
+  box-sizing: border-box;
+  margin-top: 50px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out;
+}
+
+.why-choose-us.visible {
+  opacity: 1; /* Fade in when in view */
+}
+
+.choose-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.choose-left {
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+}
+
+.choose-left h1 {
+  font-size: 3rem;
+  color: #03567F;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.choose-left p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Styling for the points section */
+.choose-right {
+  width: 50%;
+  padding: 20px;
+}
+
+.choose-right ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.choose-right li {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* Align checkmark and text */
+  opacity: 0; /* Initially hide the list items */
+  transform: translateY(20px); /* Start with slight translation */
+  transition: opacity 0.6s, transform 0.6s; /* Transition for fade-in effect */
+}
+
+/* When the list items are visible in the viewport, they will fade in */
+.choose-right li.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+/* Checkmark Styling */
+.checkmark {
+  font-size: 1.8rem;
+  color: #4caf50; /* Green checkmark */
+  margin-right: 10px; /* Space between checkmark and text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .choose-content {
+      flex-direction: column; /* Stack the content on smaller screens */
+      align-items: center;
+  }
+
+  .choose-left,
+  .choose-right {
+      width: 90%; /* Make both sections take up 90% width */
+      text-align: center; /* Center align the text on smaller screens */
+  }
+
+  .choose-left h1 {
+      font-size: 2.5rem;
+  }
+
+  .choose-right li {
+      font-size: 1rem;
+  }
+}

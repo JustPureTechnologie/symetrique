@@ -1,23 +1,29 @@
-// script.js
+// JavaScript to handle the navigation and toggle content visibility
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll('.navbar ul li');
+  const contentSections = document.querySelectorAll('.content');
 
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
+  // Add event listeners to navbar items
+  navItems.forEach(item => {
+    item.addEventListener('click', function () {
+      // Remove 'active' class from all navbar items
+      navItems.forEach(nav => nav.classList.remove('active'));
 
-function changeSlide() {
-  // Remove the "active" class from all slides
-  slides.forEach((slide) => {
-    slide.classList.remove('active');
+      // Add 'active' class to the clicked navbar item
+      item.classList.add('active');
+
+      // Hide all content sections
+      contentSections.forEach(content => {
+        content.style.display = 'none';
+      });
+
+      // Show the corresponding content section
+      const contentId = item.getAttribute('data-content');
+      document.getElementById(contentId).style.display = 'flex';
+    });
   });
 
-  // Add the "active" class to the current slide
-  slides[currentIndex].classList.add('active');
-
-  // Update the index for the next slide
-  currentIndex = (currentIndex + 1) % slides.length;
-}
-
-// Start the slideshow and update every 5 seconds
-setInterval(changeSlide, 5000); 
-
-// Initialize the first slide
-changeSlide();
+  // Set default active content
+  navItems[0].classList.add('active');
+  contentSections[0].style.display = 'flex';
+});
