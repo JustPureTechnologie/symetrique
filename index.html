@@ -1,269 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Symetrique Stage</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="./assests/style.css" />
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <!-- Link to Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-  <div>
-    <nav class="navbar sticky-top navbar-expand-lg custom-navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./assests/images/LOGO 1x1.png" alt="Logo" width="100" height="80" class="d-inline-block align-text-top" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <!-- Centering the links -->
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./solutions.html">Solutions</a> 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./expertise.html">Expertise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./AboutUs.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./resources.html">Resources</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contact.html">Contact Us</a>
-            </li>
-          </ul>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#"><img src="" alt="" ></a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="AboutUS.html">About Us</a>
+      <a href="RealTime.html">Real Time</a>
+    </div>
+  </nav>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide active">
+      <img src="./assets/images/image (1).png" alt="Image 1">
+      <div class="overlay"></div>
+      <div class="text">
+        <h1 class="heading">Let's accelerate the future of<br> medicine--together</h1>
+        <p>Harnessing the power of Artificial Intelligence and Machine Learning,<br> we are leading the charge to transform healthcare data through cutting-edge<br> technology and relentless commitment to innovation.</p>
+        <div class="buttons">
+          <button class="btn">Discover More</button>
+          <button class="btn">Request a Consult</button>
         </div>
       </div>
-    </nav>
-
-
-<!-- slideshow section -->
-   
-    <div class="slideshow-container">
-      <div class="slide" style="background-image: url('./assests/images/ai.jpg');">
-          <div class="overlay"></div>
-          <div class="text">
-              <h1><strong>The Power of Real World Data (RWD)</strong> </h1>
-<p>Real World Data (RWD) is revolutionizing healthcare by providing critical insights into patient care, treatment outcomes, and healthcare efficiencies. It is generated from daily interactions across the healthcare ecosystem, including EHRs, claims data, and wearable devices.</p>
-              <button>Learn More</button>
-          </div>
+    </div>
+    <div class="slide">
+      <img src="./assets/images/image (2).png" alt="Image 2">
+      <div class="overlay"></div>
+      <div class="text">
+        <h1 class="heading">Let's accelerate the future of<br> medicine--together</h1>
+        <p>Harnessing the power of Artificial Intelligence and Machine Learning,<br> we are leading the charge to transform healthcare data through cutting-edge<br> technology and relentless commitment to innovation.</p>
+        <div class="buttons">
+          <button class="btn">Discover More</button>
+          <button class="btn">Request a Consult</button>
+        </div>
       </div>
-      <div class="slide" style="background-image: url('./assests/images/ai1.jpg');">
-          <div class="overlay"></div>
-          <div class="text">
-              <h1><strong>Comprehensive Health Insights</strong></h1>
-<p>By capturing data from diverse sources like patient visits and health monitoring devices, RWD offers a holistic view of patient health. This wealth of information supports informed decision-making and drives improvements in healthcare delivery and outcomes.</p>              <button>Discover More</button>
-          </div>
+    </div>
+    <div class="slide">
+      <img src="./assets/images/image (3).png" alt="Image 3">
+      <div class="overlay"></div>
+      <div class="text">
+        <h1 class="heading">Let's accelerate the future of <br>medicine--together</h1>
+        <p>Harnessing the power of Artificial Intelligence and Machine Learning,<br> we are leading the charge to transform healthcare data through cutting-edge<br> technology and relentless commitment to innovation.</p>
+        <div class="buttons">
+          <button class="btn">Discover More</button>
+          <button class="btn">Request a Consult</button>
+        </div>
       </div>
-      <div class="slide" style="background-image: url('./assests/images/pic1.jpeg');">
-          <div class="overlay"></div>
-          <div class="text">
-              <h1><strong>Essential Data Sources in Healthcare</strong></h1>
-<p>Key sources like Electronic Health Records (EHR), claims data, patient registries, wearables, and drug data collectively provide a robust framework for tracking patient care, health outcomes, and treatment effectiveness, driving better healthcare insights and decisions.</p>              <button>Explore Now</button>
-          </div>
+    </div>
+    <div class="slide">
+      <img src="./assets/images/image (4).png" alt="Image 4">
+      <div class="overlay"></div>
+      <div class="text">
+        <h1 class="heading">Let's accelerate the future of<br> medicine--together</h1>
+        <p>Harnessing the power of Artificial Intelligence and Machine Learning,<br> we are leading the charge to transform healthcare data through cutting-edge<br> technology and relentless commitment to innovation.</p>
+        <div class="buttons">
+          <button class="btn">Discover More</button>
+          <button class="btn">Request a Consult</button>
+        </div>
       </div>
-      <div class="slide" style="background-image: url('./assests/images/pic4.jpg');">
-          <div class="overlay"></div>
-          <div class="text">
-              <h1><strong>Harnessing Real World Evidence (RWE)</strong></h1>
-<p>Real World Evidence (RWE) transforms Real World Data into actionable insights, supporting FDA approvals, health economics research, and market analysis, driving informed healthcare decisions.</p>            
-  <button>Join Us</button>
-          </div>
-      </div>
-      <div class="slide" style="background-image: url('./assests/images/pic5.jpg');">
-          <div class="overlay"></div>
-          <div class="text">
-              <h1><strong>Symetrique: Driving Data-Driven Healthcare Solutions</strong></h1>
-             <p> Symetrique excels in integrating complex data sets, empowering healthcare stakeholders with insights that enhance patient outcomes, streamline strategies, and foster innovation in healthcare. </p>
-               <button>Get Involved</button>
-          </div>
-      </div>
+    </div>
   </div>
-      <script src="IndexScript.js"></script>
-   
 
-    
-        <div class="container">
-          <!-- Heading and Paragraph Section -->
-          <div class="center-content">
-            <h1 class="main-heading">Gathering Real-World Data (RWD) and generating Real-World Evidence (RWE) can be time-consuming and inefficient.</h1>
-            <p class="main-paragraph">At Symetrique, we are committed to addressing this challenge head-on. By harnessing the power of Artificial Intelligence (AI) and Machine Learning (ML), we streamline the process of collecting and analyzing RWD and RWE. These advanced technologies enable us to:</p>
-            <hr class="sectionn-divider">
-          </div>
-      
-          <!-- Rectangle Section 1 -->
-          <div class="rectangle-container">
-            <div class="rectangle">
-              <h2 class="rectangle-heading">Accelerate Data Collection</h2>
-              <p class="rectangle-paragraph">AI algorithms can process vast amounts of real-world data in record time, identifying patterns and insights that manual methods might miss.</p>
-            </div>
-            <hr class="section-divider">
-          </div>
-      
-          <!-- Rectangle Section 2 -->
-          <div class="rectangle-container">
-            <div class="rectangle">
-              <h2 class="rectangle-heading">Enhance Predictive Analysis</h2>
-              <p class="rectangle-paragraph">ML models allow us to predict outcomes and optimize study designs, reducing the time and resources required for trials.</p>
-            </div>
-            <hr class="section-divider">
-          </div>
-      
-          <!-- Rectangle Section 3 -->
-          <div class="rectangle-container">
-            <div class="rectangle">
-              <h2 class="rectangle-heading">Improve Decision-Making</h2>
-              <p class="rectangle-paragraph">By providing accurate, real-time insights, we empower stakeholders to make data-driven decisions quickly and confidently.</p>
-            </div>
-            <hr class="section-divider">
+  <!-- New Page Content Section -->
+  <section class="new-page-section">
+    <div class="new-image-container">
+      <img src="./assets/images/image (5).png" alt="New Image">
+    </div>
+    <div class="new-text-container">
+      <h1 class="new-heading">Innovating Healthcare with AI</h1>
+      <p>We are committed to transforming healthcare through the power of Artificial Intelligence and Machine Learning, offering innovative solutions that change the way we think about healthcare.</p>
+      <div class="new-buttons">
+        <button class="new-btn">Discover More</button>
+        <button class="new-btn">Capabilities</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach Section -->
+  <section class="approach-section">
+    <h1 class="approach-heading">Our Approach is the Same</h1>
+    <hr class="approach-hr">
+    <div class="approach-images">
+      <div class="approach-image-container">
+        <div class="colored-box">
+          <h2 class="colored-box-heading">Accelerate Data Collection</h2>
+          <div class="overlay-content">
+            <p class="overlay-paragraph">Ai algorithms can process vast amounts of real-world data in record time, identifying patterns and insights that manual methods might miss.</p>
+            <a href="capabilities.html" class="overlay-btn">Our capabilities</a>
           </div>
         </div>
-   
-<!-- third page -->  <!-- Hero Section -->
+        <img src="./assets/images/approach1.png" alt="Approach 1">
+      </div>
+      <div class="approach-image-container">
+        <div class="colored-box">
+          <h2 class="colored-box-heading">Enhance Predictive Analysis</h2>
+          <div class="overlay-content">
+            <p class="overlay-paragraph">Ml models allow us to predict outcomes and optimize study designs, reducing the time and resources required for trials.</p>
+            <a href="capabilities.html" class="overlay-btn">Our capabilities</a>
+          </div>
+        </div>
+        <img src="./assets/images/approach2.png" alt="Approach 2">
+      </div>
+      <div class="approach-image-container">
+        <div class="colored-box">
+          <h2 class="colored-box-heading">Improve Decision-Making</h2>
+          <div class="overlay-content">
+            <p class="overlay-paragraph">We provide accurate, real-time insights and empower stakeholders to make quick and confident data-driven decisions.</p>
+            <a href="capabilities.html" class="overlay-btn">Our capabilities</a>
+          </div>
+        </div>
+        <img src="./assets/images/approach3.png" alt="Approach 3">
+      </div>
+    </div>
+  </section>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Unlocking the Power of Real World Evidence in Healthcare</h1>
       <p>Transforming Data into Insight for Better Patient Outcomes</p>
       <a href="https://docs.google.com/document/d/1Kt7vQnTrvyOV1QpbK4RpgGjhJ-rX4H2gDBNj4emwpP0/edit?usp=sharing" class="cta-button">Learn More</a>
     </div>
-</section>
-
-<!-- blog section -->
-  <!-- Blog Link Section -->
-  <section class="blog">
-    <h2>Dive Deeper into Real World Evidence</h2>
-    <p>To explore more, check out our latest blog post.</p>
-    <a href="https://docs.google.com/document/d/1Kt7vQnTrvyOV1QpbK4RpgGjhJ-rX4H2gDBNj4emwpP0/edit?usp=sharing" class="cta-button">Read the Blog</a>
   </section>
 
 
-
-
-
-
-  <!-- offerings sect -->
-    <section>
-      <div class="offering-row">
-        <h1>Our Offerings</h1>
+  <!-- footer -->
+   <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+          <img src="./assets/images/Untitled-2-05.png" alt="Logo" class="logo-img">
       </div>
-      <div class="offering-row">
-        <div class="offering-column">
-          <div class="offering-card">
-            <div class="offering-icon">
-              <i class="fas fa-database"></i>
-            </div>
-            <h3>Onboard Data</h3>
-            <p>
-              We onboard the data and screen data for quality, accuracy, and fit for
-              purpose for the use case. We use compliant processes for data
-              onboarding, retention, and archival.
-            </p>
-          </div>
-        </div>
-        <div class="offering-column">
-          <div class="offering-card">
-            <div class="offering-icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3>Insights</h3>
-            <p>
-              We drive results based on the data analytics to drive the outcome. The
-              data driven insights create differentiation and provide lasting
-              results
-            </p>
-          </div>
-        </div>
-        <div class="offering-column">
-          <div class="offering-card">
-            <div class="offering-icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <h3>Tech Platform</h3>
-            <p>
-              Our tech platform is nimble and translate strategy to results quickly.
-              It includes Big Data, Data Science, Machine Learning, LLMs, and AI to
-              utilize disparate data sources
-            </p>
-          </div>
-        </div>
-        <div class="offering-column">
-          <div class="offering-card">
-            <div class="offering-icon">
-              <i class="fas fa-pencil-ruler"></i>
-            </div>
-            <h3>Study Design Consulting</h3>
-            <p>
-              We believe in unique solution for the use case and create a
-              differentiated offering to derive the results. We provide consulting
-              services from onboarding data to derive insights.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-
-    <!-- footer section -->
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Contact Us</h3>
-          <p>Email: support@example.com</p>
-          <p>Phone: +1 234 567 890</p>
-          <p>Socials:</p>
+      <!-- Capabilities List -->
+      <div class="footer-list">
+          <h3>Capabilities</h3>
           <ul>
-            <!-- <li><a href="#">Facebook</a></li> -->
-            <li><a href="#"><i class="fab fa-linkedin-in"></i></i>  Linkedin</a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+              <li><a href="#">AI in Healthcare</a></li>
+              <li><a href="#">Big Data</a></li>
+              <li><a href="#">US & Global Healthcare</a></li>
           </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Address</h3>
-          <p>1234 Elm Street</p>
-          <p>City, Country 56789</p>
-          <p>Opening Hours:</p>
-          <p>Mon-Fri: 9 AM - 5 PM</p>
-        </div>
-        <div class="footer-section">
-          <h3>Tags</h3>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Development</a></li>
-            <li><a href="#">SEO</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">UX/UI</a></li>
-          </ul>
-        </div>
       </div>
-      <!-- Horizontal Rule -->
-      <hr class="footer-hr">
-    </footer>
-    
-    
+
+      <!-- About Us List -->
+      <div class="footer-list">
+          <h3>About Us</h3>
+          <ul>
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+          </ul>
+      </div>
+
+      <!-- Real-Time List -->
+      <div class="footer-list">
+          <h3>Real-Time</h3>
+          <ul>
+              <li><a href="#">Real-Time Analytics</a></li>
+              <li><a href="#">Live Data Integration</a></li>
+          </ul>
+      </div>
+
+      <!-- Connect List -->
+      <div class="footer-list">
+          <h3>Connect</h3>
+          <ul>
+              <li><a href="mailto:info@thesymetrique.com">Email: info@thesymetrique.com</a></li>
+              <li><a href="request-consult.html">Request a Consult</a></li>
+              <li><a href="#">Get in Touch</a></li>
+          </ul>
+      </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-</body>
+</footer>
 
+  <script src="index.js"></script>
+</body>
 </html>

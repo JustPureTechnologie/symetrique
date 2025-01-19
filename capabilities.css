@@ -1,0 +1,539 @@
+/* Navbar (Updated) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Initially black background with transparency */
+    z-index: 10;
+    transition: background-color 0.3s, padding 0.3s;
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
+  }
+  
+  /* When scrolled */
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 1); /* Solid black when scrolled */
+    padding: 15px 20px; /* Adjust padding when scrolled, if desired */
+  }
+  
+  /* Logo Styling */
+  .navbar .logo a {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  
+  .navbar .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-links {
+    display: flex;
+    gap: 30px;
+    padding-right: 20px;
+  }
+  
+  .navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #03567F;
+  }
+  
+
+
+  /* second page */
+  /* Expertise Section */
+/* Expertise Section */
+/* Expertise Section */
+.expertise-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.expertise-heading {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font applied */
+    font-size: 36px;
+    color: #079B7E;
+    margin-bottom: 20px;
+}
+
+.expertise-description {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font applied */
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Expertise Grid Layout */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 10px; /* Reduced space between the items */
+    justify-items: center; /* Centers items horizontally */
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Expertise Item (Image or Colored Box) */
+.expertise-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Colored Box Styling */
+.colored-box {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute; /* To ensure it doesn't overflow */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: 'Montserrat', sans-serif; /* Montserrat font applied */
+    font-size: 14px;
+}
+
+/* Individual Colored Boxes */
+#box1 {
+    background-color: #89D0f0;
+}
+
+#box2 {
+    background-color: #079B7E;
+}
+
+#box3 {
+    background-color: #03567F;
+}
+
+/* Colored Box Heading */
+.colored-box-heading {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font applied */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Colored Box Paragraph */
+.colored-box-paragraph {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font applied */
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+.expertise-img {
+    width: 100%; /* Takes full width */
+    height: 100%; /* Takes full height */
+    object-fit: cover; /* Ensures image covers the square proportionally */
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on medium screens */
+    }
+
+    .expertise-img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-heading {
+        font-size: 28px;
+    }
+
+    .expertise-description {
+        font-size: 16px;
+    }
+
+    .colored-box-heading {
+        font-size: 20px;
+    }
+
+    .expertise-img {
+        height: 200px;
+    }
+}
+
+
+
+
+/* third section */
+/* Consultation Section */
+.consultation-section {
+    background-color: #017B63;
+    margin-top: 60px;
+    padding: 50px 20px;
+    font-family: 'Montserrat', sans-serif; /* Font applied */
+    color: white;
+}
+
+.consultation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limits the container width */
+    width: 100%;
+    height: 240px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.consultation-left {
+    width: 50%; /* Left side for heading, takes 50% of the container */
+}
+
+.consultation-right {
+    width: 50%; /* Right side for text and button, takes 50% of the container */
+    text-align: left; /* Aligns text to the left */
+}
+
+.consultation-heading {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.consultation-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.consultation-button {
+    background-color: #eff1f1;
+    color: rgb(20, 2, 2);
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.consultation-button:hover {
+    background-color: #03567F;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .consultation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consultation-left, .consultation-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .consultation-heading {
+        font-size: 28px;
+    }
+
+    .consultation-description {
+        font-size: 16px;
+    }
+
+    .consultation-button {
+        padding: 12px 24px;
+    }
+}
+
+
+/* diagram */
+/* New Section for Image */
+.consultation-image-section {
+    text-align: center; /* Centers the content */
+    margin-top: 50px; /* Adds margin-top to space out from the previous content */
+}
+
+.consultation-image img {
+    max-width: 60%; /* Ensures the image is responsive */
+    height: auto; /* Keeps the aspect ratio of the image intact */
+    width: 60%; /* Ensures the image takes up the full container width */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .consultation-image img {
+        max-width: 90%; /* Ensures the image fits well on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .consultation-image img {
+        max-width: 80%; /* Further reduce the image size for very small screens */
+    }
+}
+
+
+/* section below image */
+
+/* Final Section */
+.final-section {
+    background-color: #017B63; /* Background color */
+    color: white; /* Text color */
+    padding: 50px 20px; /* Padding */
+}
+
+.final-container {
+    display: flex;
+    justify-content: space-between; /* Ensures content is aligned left and right */
+    align-items: center; /* Vertically aligns text */
+}
+
+.final-left, .final-right {
+    width: 48%; /* Takes 48% of the container, making them half and half */
+    padding: 10px;
+}
+
+.final-left {
+    text-align: center;
+}
+
+.final-right {
+    text-align: center;
+}
+
+/* Final Section Heading */
+.final-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Final Section Paragraph */
+.final-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .final-container {
+        flex-direction: column; /* Stacks left and right content on small screens */
+        align-items: center; /* Centers the content */
+    }
+
+    .final-left, .final-right {
+        width: 100%; /* Ensures both sections take full width on smaller screens */
+        text-align: center; /* Centers text on small screens */
+    }
+
+    .final-heading {
+        font-size: 28px;
+    }
+
+    .final-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-heading {
+        font-size: 24px; /* Makes heading smaller on very small screens */
+    }
+
+    .final-description {
+        font-size: 14px; /* Makes paragraph smaller */
+    }
+}
+
+
+
+/* ICON SECTION */
+.icon-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 70px;
+}
+
+.icon-item {
+    width: 20%;
+}
+
+.icon-item img {
+    width: 80px;  /* Adjust image size */
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.icon-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.icon-item p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-weight: 400;
+    font-size: 17px;
+    color: #0c0a0a;
+}
+
+
+/* last section */
+
+
+    /* Styling for the section */
+    .colored-section {
+        background-color: #03567F;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        height: 220px;
+    }
+
+    /* Left side for text */
+    .left-side {
+        width: 50%;
+        /* padding-right: px; */
+    }
+
+    .left-side h2 {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    
+
+    /* Right side for buttons */
+    .right-side {
+        width: 50%;
+        text-align: center;
+    }
+
+    .btn {
+        background-color: #ffffff;
+        color: #03567F;
+        border: none;
+        padding: 10px 20px;
+        margin: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 0;
+        text-decoration: none; /* Ensures no underline */
+    }
+
+    .btn:hover {
+        background-color: #023F5D;
+        color: white;
+    }
+
+
+
+    /* footer */
+    /* Footer Styling */
+.footer {
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 2px solid black;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to stack on smaller screens */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Section */
+.footer-logo .logo-img {
+    width: 150px; /* Adjust logo size as needed */
+    height: auto;
+}
+
+/* Footer List Sections */
+.footer-list {
+    flex: 1; /* Distribute space equally */
+    min-width: 220px;
+}
+
+/* Footer List Headings */
+.footer-list h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Footer List Items */
+.footer-list ul {
+    list-style-type: none;
+}
+
+.footer-list ul li {
+    margin-bottom: 10px;
+}
+
+.footer-list ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-list ul li a:hover {
+    color: #03567F;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-list {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}

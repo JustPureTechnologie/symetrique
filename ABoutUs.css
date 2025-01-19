@@ -1,169 +1,499 @@
-/* About Us Section Styling */
-.about-us {
-    padding: 100px 20px; /* Add padding from the outer edges of the page */
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-  }
-  
-  .about-content {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+/* Reset default styles */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .about-left,
-  .about-image {
-    width: 48%; /* Take up 50% of the width for left and right sections */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Initially black background with transparency */
+    z-index: 10;
+    transition: background-color 0.3s, padding 0.3s;
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
   }
   
-  .about-left h1 {
-    font-size: 3rem;
+  /* When scrolled */
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 1); /* Solid black when scrolled */
+    padding: 15px 20px; /* Adjust padding when scrolled, if desired */
+  }
+  
+  /* Logo Styling */
+  .navbar .logo a {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  
+  .navbar .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-links {
+    display: flex;
+    gap: 30px;
+    padding-right: 20px;
+  }
+  
+  .navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
+  }
+  
+  .navbar .nav-links a:hover {
     color: #03567F;
-    font-weight: 700;
-    margin-bottom: 20px;
   }
   
-  .about-left p {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
-    text-align: justify; /* Justify the text for better readability */
-  }
-  
-  .about-image img {
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
     width: 100%;
-    height: auto;
-    border-radius: 10px; /* Add a little border-radius for a smooth edge */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-content {
-      flex-direction: column; /* Stack the content on smaller screens */
-      align-items: center;
-    }
-  
-    .about-left,
-    .about-image {
-      width: 100%; /* Take up full width on smaller screens */
-      text-align: center; /* Center align text for better layout */
-      padding: 15px;
-    }
-  
-    .about-left h1 {
-        text-align: center;
-        align-items: center;
-      font-size: 2.5rem;
-      
-    }
-  
-    .about-left p {
-      font-size: 1rem;
-      text-align: center;
-    }
-  }
-  
-
-/* Why Choose Us Section Styling */
-.why-choose-us {
-  padding: 100px 20px;
-  background-color: #f5f9fc; /* Light background color for contrast */
-  box-sizing: border-box;
-  margin-top: 50px;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
-.why-choose-us.visible {
-  opacity: 1; /* Fade in when in view */
+.navbar .logo a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
 }
 
-.choose-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  max-width: 1200px;
-  margin: 0 auto;
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
-.choose-left {
-  width: 50%;
-  padding: 20px;
-  text-align: left;
+.nav-links li {
+    margin: 0 15px;
 }
 
-.choose-left h1 {
-  font-size: 3rem;
-  color: #03567F;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
-.choose-left p {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.8;
+.nav-links a:hover {
+    color: #f39c12; /* Hover effect */
 }
 
-/* Styling for the points section */
-.choose-right {
-  width: 50%;
-  padding: 20px;
+/* Header Section with Background */
+.header {
+    height: 300px; /* Height of the header */
+    margin-top: 48px; /* Ensure the navbar doesn't overlap */
+    position: relative; /* Position context for absolute positioning of the video */
+    background-color: #079b7E; /* Background color (green) */
+   
+    background-size: cover; /* Ensures the background covers the entire header */
+    background-position: center; /* Centers the background image */
+    padding: 50px 20px;
+    text-align: center;
+    /* Removed overflow: hidden to allow the video to be visible below the header */
 }
 
-.choose-right ul {
-  list-style-type: none; /* Remove default bullet points */
-  padding: 0;
+/* Video Overlay (will overlap half on the background and half outside) */
+.header .video-overlay {
+    position: absolute;
+    bottom: -50px; /* Move the video so half of it is below the header */
+    left: 10%; /* Position the video with some left margin */
+    right: 10%; /* Position the video with some right margin */
+    height: 300px; /* Height of the video */
+    z-index: 1; /* Ensure the video appears above the background image */
 }
 
-.choose-right li {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center; /* Align checkmark and text */
-  opacity: 0; /* Initially hide the list items */
-  transform: translateY(20px); /* Start with slight translation */
-  transition: opacity 0.6s, transform 0.6s; /* Transition for fade-in effect */
-}
-
-/* When the list items are visible in the viewport, they will fade in */
-.choose-right li.visible {
-  opacity: 1;
-  transform: translateY(0); /* Move to normal position */
-}
-
-/* Checkmark Styling */
-.checkmark {
-  font-size: 1.8rem;
-  color: #4caf50; /* Green checkmark */
-  margin-right: 10px; /* Space between checkmark and text */
+/* Ensure video stretches across the full width within the margins */
+.header .video-overlay video {
+    width: 100%; /* Ensure the video spans the full width of the container */
+    height: 100%; /* Make the video fill the height of the container */
+    object-fit: cover; /* Ensures the video covers the area properly without stretching */
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .choose-content {
-      flex-direction: column; /* Stack the content on smaller screens */
-      align-items: center;
-  }
-
-  .choose-left,
-  .choose-right {
-      width: 90%; /* Make both sections take up 90% width */
-      text-align: center; /* Center align the text on smaller screens */
-  }
-
-  .choose-left h1 {
-      font-size: 2.5rem;
-  }
-
-  .choose-right li {
-      font-size: 1rem;
-  }
+@media screen and (max-width: 768px) {
+    .header .video-overlay {
+        bottom: -40px; /* Adjust video position for smaller screens */
+        height: 100px; /* Adjust video height for smaller screens */
+        left: 5%; /* Adjust left margin for smaller screens */
+        right: 5%; /* Adjust right margin for smaller screens */
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .header .video-overlay {
+        bottom: -30px; /* Further adjust video position for very small screens */
+        height: 80px; /* Further adjust video height for very small screens */
+        left: 0%; /* Reduce left margin for very small screens */
+        right: 0%; /* Reduce right margin for very small screens */
+    }
+}
+
+
+
+/* below */
+
+
+
+/* General body and font setup */
+body {
+    font-family: 'Montserrat', sans-serif; /* Applying Montserrat font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Section 1: Headline and paragraph in the center */
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh; /* Full viewport height */
+    text-align: center;
+    background-color: #ffffff; /* Light background color */
+    margin-bottom: 10px; /* Reduced margin bottom to decrease gap */
+}
+
+.content-section .text-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.content-section h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Section 2: Image and description on the same row */
+.image-description-section {
+    display: flex;
+    justify-content: space-between; /* Distribute space between the description and image */
+    align-items: flex-start; /* Align items at the top */
+    padding: 40px 20px; /* Padding for spacing inside the section */
+    background-color: #fff; /* White background for this section */
+    margin-top: 0; /* Remove extra margin top */
+}
+
+.image-description-section .description,
+.image-description-section .image {
+    width: 48%; /* Both take 48% of the container's width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.image-description-section .description {
+    padding: 20px; /* Added padding for more space inside the description */
+    background-color: #f9f9f9; /* Light background color for the description */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+.image-description-section .description h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px; /* Added margin to separate the title from the paragraph */
+}
+
+.image-description-section .description p {
+    font-size: 1.1rem; /* Slightly increased font size for readability */
+    color: #666;
+    line-height: 1.8; /* Added more space between lines */
+    margin-bottom: 20px; /* Added bottom margin to space it out from the next element */
+}
+
+/* Image styling */
+.image-description-section .image {
+    padding: 15px; /* Padding inside the image section */
+}
+
+.image-description-section .image img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners for the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .image-description-section {
+        flex-direction: column; /* Stack the description and image vertically on smaller screens */
+        text-align: center;
+    }
+
+    .image-description-section .description,
+    .image-description-section .image {
+        width: 100%; /* Make each take full width */
+        margin-bottom: 20px; /* Adds spacing between the image and description */
+    }
+
+    .content-section h1 {
+        font-size: 2rem; /* Smaller headline for smaller screens */
+    }
+
+    .content-section p {
+        font-size: 1rem; /* Smaller paragraph font for smaller screens */
+    }
+}
+
+
+
+
+/* 2 coloured boxes */
+ /* Section 1 */
+ .section-1 {
+    
+    background-color: #1A3A6A; /* New color for background */
+    padding: 80px;
+    color: #A4D8F6; /* New color for headline */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Ensuring Montserrat font for this section */
+}
+
+.section-1 h1 {
+    font-size: 36px;
+}
+
+.section-1 p {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Section 2 */
+.section-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-family: 'Montserrat', sans-serif; /* Ensuring Montserrat font for this section */
+}
+
+.section-2 .left-content {
+    margin-top: 50px;
+    margin-left: 60px;
+    color: #03567F;
+    width: 48%;
+}
+
+.section-2 .right-content {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+}
+
+/* Box Styling */
+.box {
+    width: 48%; /* Equal width for both boxes */
+    padding: 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+   
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    height: 250px; /* Fixed height to make it squared */
+}
+
+.box1 {
+    background-color: #89D0f0; /* Orange */
+}
+
+.box2 {
+    background-color: #89D0f0; /* Light blue */
+}
+
+.btn {
+    background-color: #fff;
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #1A3A6A;
+    color: #fff;
+}
+ /* form */
+ /* Section with unique class */
+ .custom-section {
+    background-color: #03567F; /* Blue background */
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.custom-left-content {
+    width: 48%;
+    margin-top: 130px;
+}
+
+.custom-right-content {
+    width: 48%;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side Heading and Subheading */
+.custom-left-content h1 {
+    color: #89D0F0; /* Light Blue color */
+    font-size: 45px;
+}
+
+.custom-left-content h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.custom-left-content p {
+    color: white;
+    font-size: 18px;
+}
+
+/* Form styling */
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row input {
+    width: 48%; /* Each input will take up 48% of the width */
+}
+
+.custom-form input,
+.custom-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+    background-color: white; /* White background for textboxes */
+}
+
+.custom-form button {
+    padding: 12px;
+    background-color: #03567F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-form button:hover {
+    background-color: #0281A2; /* Slightly darker shade */
+}
+  /* footer */
+    /* Footer Styling */
+    .footer {
+        background-color: white;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        border-top: 2px solid black;
+        padding: 40px 20px;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Allows items to stack on smaller screens */
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Logo Section */
+    .footer-logo .logo-img {
+        width: 150px; /* Adjust logo size as needed */
+        height: auto;
+    }
+    
+    /* Footer List Sections */
+    .footer-list {
+        flex: 1; /* Distribute space equally */
+        min-width: 220px;
+    }
+    
+    /* Footer List Headings */
+    .footer-list h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    
+    /* Footer List Items */
+    .footer-list ul {
+        list-style-type: none;
+    }
+    
+    .footer-list ul li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-list ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-list ul li a:hover {
+        color: #03567F;
+    }
+    
+    /* Responsive Design for smaller screens */
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+    
+        .footer-list {
+            min-width: 100%;
+            margin-bottom: 20px;
+        }
+    
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+    }
+    

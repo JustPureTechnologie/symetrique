@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+/* Reset default styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Initially black background with transparency */
+    z-index: 10;
+    transition: background-color 0.3s, padding 0.3s;
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
+  }
+  
+  /* When scrolled */
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 1); /* Solid black when scrolled */
+    padding: 15px 20px; /* Adjust padding when scrolled, if desired */
+  }
+  
+  /* Logo Styling */
+  .navbar .logo a {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  
+  .navbar .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Navbar Links */
+  .navbar .nav-links {
+    display: flex;
+    gap: 30px;
+    padding-right: 20px;
+  }
+  
+  .navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #03567F;
+  }
+  
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: #f39c12; /* Hover effect */
+}
+
+
+/* header */
+.real-time-section {
+  display: flex;
+  background-color: #03567F;
+  padding: 20px;
+  margin-top: 49px;
+  height: 300px;
+  color: white; /* Text color */
+  font-family: 'Montserrat', sans-serif; /* Applying Montserrat font */
+}
+
+.real-time-heading {
+  flex: 1; /* Makes the heading take up available space */
+  font-weight: 600; /* Slightly bolder weight for the heading */
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+.real-time-paragraph {
+  flex: 3; /* Makes the paragraph take up more space */
+  padding-left: 20px;
+  font-weight: 400; /* Normal weight for the paragraph */
+  margin-top: 60px;
+  margin-right: 60px;
+  margin-left: 90px;
+}
+
+
+
+/* Explore Section */
+.explore-section {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+.search-box {
+  margin-right: 100px; /* Adds space between the search box and the heading */
+}
+
+.search-box input {
+  width: 500px; /* Set a small width for the search box */
+  padding: 8px;
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Border for the search box */
+}
+
+.explore-heading h3 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  font-weight: 600;
+  font-size: 35px;
+}
+
+
+
+/* cards */
+/* Cards Section */
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.card {
+  width: 300px;
+  height: 200px; /* Fixed height to maintain a square shape */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the content fits inside the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 50px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image fits the space correctly */
+}
+
+.card-topic {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #03567F;
+}
+
+.card-title {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+/* footer */
+    /* Footer Styling */
+    .footer {
+      background-color: white;
+      color: black;
+      font-family: 'Montserrat', sans-serif;
+      border-top: 2px solid black;
+      padding: 40px 20px;
+  }
+  
+  .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; /* Allows items to stack on smaller screens */
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  /* Logo Section */
+  .footer-logo .logo-img {
+      width: 150px; /* Adjust logo size as needed */
+      height: auto;
+  }
+  
+  /* Footer List Sections */
+  .footer-list {
+      flex: 1; /* Distribute space equally */
+      min-width: 220px;
+  }
+  
+  /* Footer List Headings */
+  .footer-list h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 500;
+  }
+  
+  /* Footer List Items */
+  .footer-list ul {
+      list-style-type: none;
+  }
+  
+  .footer-list ul li {
+      margin-bottom: 10px;
+  }
+  
+  .footer-list ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+      transition: color 0.3s ease;
+  }
+  
+  .footer-list ul li a:hover {
+      color: #03567F;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+      .footer-content {
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+      }
+  
+      .footer-list {
+          min-width: 100%;
+          margin-bottom: 20px;
+      }
+  
+      .footer-logo {
+          margin-bottom: 20px;
+      }
+  }
+  

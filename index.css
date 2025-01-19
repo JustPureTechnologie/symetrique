@@ -1,0 +1,516 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: transparent;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.navbar .logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 30px;
+  padding-right: 20px;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+  color: #03567F;
+}
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 10;
+  padding-left: 20px;
+}
+
+.heading {
+  font-size: 48px;
+  color: #03567F;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #03567F;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn:hover {
+  background-color: #024d6a;
+}
+
+/* New Page Section */
+.new-page-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  height: 100vh;
+}
+
+.new-image-container {
+  flex: 1.5;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 50px;
+}
+
+.new-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.new-text-container {
+  flex: 1;
+  padding-right: 50px;
+  padding-left: 20px;
+}
+
+.new-heading {
+  font-size: 36px;
+  color: #079B7E;
+  margin-bottom: 20px;
+}
+
+.new-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.new-btn {
+  padding: 10px 20px;
+  background-color: #079B7E;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.new-btn:hover {
+  background-color: #057b62;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .new-page-section {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .new-image-container {
+      max-width: 300px;
+      padding-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .new-text-container {
+      padding-left: 0;
+      text-align: center;
+  }
+
+  .new-heading {
+      font-size: 28px;
+  }
+
+  .new-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-heading {
+      font-size: 24px;
+  }
+
+  .new-btn {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: #03567F;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #079B76;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Approach Section */
+.approach-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.approach-heading {
+  font-size: 36px;
+  color: #070c0b; /* Green color */
+  margin-bottom: 20px;
+}
+
+.approach-hr {
+  width: 50%;
+  margin: 20px auto;
+  border-top: 2px solid #131414;
+  margin-bottom: 50px;
+}
+
+/* Flexbox for the images */
+.approach-images {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Image Containers */
+.approach-image-container {
+  position: relative;
+  width: 33%;  /* Increase width of each container */
+  max-width: 400px; /* Increase max width for the image container */
+  margin-bottom: 70px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Make it clickable */
+}
+
+/* Image Styling */
+.approach-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Color Box Styling (Square within the Image) */
+.colored-box {
+  position: absolute;
+  top: 50%;  /* Position it in the middle vertically */
+  left: 50%; /* Position it in the middle horizontally */
+  width: 85%;  /* Make the colored box 85% width of the image */
+  height: 80%; /* Make the colored box 80% height of the image */
+  background-color: rgba(7, 155, 125, 0.384); /* Semi-transparent green */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  z-index: 10; /* Ensure the box is above the image */
+  transition: transform 0.3s ease;
+  padding: 20px;
+  opacity: 1; /* Make it visible initially */
+  pointer-events: none; /* Ensure clicks pass through the box initially */
+  overflow: hidden;
+  transform: translate(-50%, -50%); /* Center the box */
+}
+
+/* Heading inside the box */
+.colored-box-heading {
+  font-size: 22px; /* Default font size for the heading */
+  text-align: center; /* Center the heading text */
+  margin: 0; /* Remove any margin to ensure equal spacing from all sides */
+  padding: 0; /* No extra padding around the heading */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* This will make the heading take up available space inside the box */
+}
+
+/* Hover Effect - Enlarge the Image */
+.approach-image-container:hover img {
+  transform: scale(1.1); /* Enlarge the image */
+}
+
+/* Hover Effect on Box (Make content visible) */
+.approach-image-container:hover .colored-box {
+  opacity: 1; /* Keep the box fully visible */
+  pointer-events: auto; /* Enable clicks on the box */
+}
+
+/* Overlay Content - Hidden initially */
+.overlay-content {
+  display: flex; /* Always visible on hover */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.overlay-paragraph {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+}
+
+.overlay-btn {
+  padding: 10px 20px;
+  background-color: #fcfcfc;
+  color: rgb(26, 23, 23);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: none; /* Hidden initially */
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Initially hidden */
+  text-decoration: none; /* Remove underline */
+  outline: none; /* Remove any focus outline */
+}
+
+/* Hover effect for the button (if you want it to change style when hovered) */
+.overlay-btn:hover {
+  background-color: #bbeee3; /* Darker green on hover */
+}
+
+/* Hover Effect to Make Content Visible */
+.approach-image-container:hover .overlay-content {
+  opacity: 1; /* Make content (paragraph and button) visible on hover */
+}
+
+.approach-image-container:hover .overlay-btn {
+  display: block; /* Show the button on hover */
+  opacity: 1; /* Ensure button becomes visible on hover */
+}
+
+.approach-image-container:hover .colored-box-heading {
+  font-size: 24px; /* Slightly enlarge the heading text on hover */
+  opacity: 1; /* Ensure heading stays visible */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .approach-images {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .approach-image-container {
+      width: 80%;
+  }
+
+  .colored-box {
+      width: 90%;
+      top: 5%;
+      height: 25%;
+  }
+
+  .colored-box-heading {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .approach-heading {
+      font-size: 28px;
+  }
+
+  .overlay-text {
+      font-size: 16px;
+  }
+
+  .overlay-paragraph {
+      font-size: 12px;
+  }
+
+  .overlay-btn {
+      font-size: 12px;
+      padding: 8px 16px;
+  }
+}
+
+
+/* footer */
+/* Footer Styling */
+.footer {
+  background-color: white;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  border-top: 2px solid black;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to stack on smaller screens */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Section */
+.footer-logo .logo-img {
+  width: 150px; /* Adjust logo size as needed */
+  height: auto;
+}
+
+/* Footer List Sections */
+.footer-list {
+  flex: 1; /* Distribute space equally */
+  min-width: 220px;
+}
+
+/* Footer List Headings */
+.footer-list h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Footer List Items */
+.footer-list ul {
+  list-style-type: none;
+}
+
+.footer-list ul li {
+  margin-bottom: 10px;
+}
+
+.footer-list ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-list ul li a:hover {
+  color: #03567F;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+  }
+
+  .footer-list {
+      min-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .footer-logo {
+      margin-bottom: 20px;
+  }
+}

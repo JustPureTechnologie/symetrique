@@ -3,57 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="ABoutUs.css">
-    <link rel="stylesheet" href="ABoutUS.js">
+    <title>Overlapping Image Design</title>
+    <link rel="stylesheet" href="AboutUS.css">
 </head>
 <body>
-    
- <!-- About Us Section -->
-<section class="about-us" id="about-us">
-    <div class="about-content">
-      <!-- Left Side: Heading and Description -->
-      <div class="about-left">
-        <h1>About Us</h1>
-        <p>
-          Symmetrique is a leading innovator in healthcare technology. Our mission is to harness cutting-edge technologies to streamline the management of healthcare systems, improving patient care, and boosting operational efficiency. 
-          <br><br>
-          With a vision to revolutionize the healthcare landscape, Symmetrique integrates AI, machine learning, and telemedicine to create efficient, accessible, and patient-centered solutions. Our goal is to empower healthcare providers with the tools they need to deliver high-quality care while reducing costs and improving patient outcomes globally. 
-          <br><br>
-          Our team of experts works tirelessly to deliver transformative solutions that cater to the unique needs of modern healthcare systems, bringing innovation and efficiency to the forefront of patient care.
-        </p>
-      </div>
-  
-      <!-- Right Side: Image -->
-      <div class="about-image">
-        <img src="./assests/images/ai.jpg" alt="About Symmetrique" />
-      </div>
-    </div>
-  </section>
-  
-<!-- Why Choose Us Section -->
-<section class="why-choose-us" id="why-choose-us">
-  <div class="choose-content">
-    <!-- Heading and Description -->
-    <div class="choose-left">
-      <h1>Why Choose Us?</h1>
-      <p>
-        At Symmetrique, we are committed to transforming healthcare through cutting-edge technology and innovation. Here are a few reasons why you should partner with us:
-      </p>
-    </div>
 
-    <!-- Points List -->
-    <div class="choose-right">
-      <ul id="reasons-list">
-        <li><span class="checkmark">&#10003;</span> Advanced AI-powered solutions for better patient care.</li>
-        <li><span class="checkmark">&#10003;</span> Seamless integration with existing healthcare systems.</li>
-        <li><span class="checkmark">&#10003;</span> Streamlined operations to improve efficiency and reduce costs.</li>
-        <li><span class="checkmark">&#10003;</span> Commitment to patient-centered care and outcomes.</li>
-        <li><span class="checkmark">&#10003;</span> Proven track record of success in healthcare technology implementation.</li>
-      </ul>
+      <!-- Navbar (from previous code) -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#"><img src="" alt="" ></a>
     </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="AboutUS.html">About Us</a>
+      <a href="RealTime.html">Real Time</a>
+    </div>
+  </nav>
+
+
+
+<!-- Header Section with Background -->
+<div class="header">
+  <!-- Video that will overlap the bottom part of the background -->
+  <div class="video-overlay">
+      <video autoplay loop muted>
+          <source src="./assets/videos/dataAnalytics.mov" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+</div>
+
+
+<!-- below the header -->
+<!-- Section with headline and paragraph -->
+<section class="content-section">
+  <div class="text-content">
+      <h1>At Symetrique, we curate, connect, and derive insight.</h1>
+      <p>We are on a mission to shorten timeliness between drug discovery and patient care, ensuring lifesaving treatments reach those who need them most. Pronto</p>
   </div>
 </section>
-<script src="ABoutUS.js"></script>
-  </body>
-  </html>
+
+<!-- Section with image and description -->
+<section class="image-description-section">
+  <div class="description">
+      <p>The challenge of bringing new medicine to market is significant, but the opportunity to make a difference is even greater. With AI, ML, and a shared vision of progress, we can turn today's challenges into tomorrow's triumphs. Patients are waiting with hope, and the tools to expedite drug launches are already here. At Symetrique, we are leading the charge to transform the pharmaceutical industry through cutting-edge technology and relentless commitment to innovation.</p>
+  </div>
+  <div class="image">
+      <img src="./assets/images/aboutUS.png" alt="About us">
+  </div>
+</section>
+
+
+<!-- two coloured boxes -->
+   <!-- Section 1 -->
+   <div class="section-1">
+    <h1>Join Us in Transforming Healthcare</h1>
+    <p>Whether you're a pharmaceutical company, a healthcare provider, or an advocate for <br> change, we believe collaboration is the key to success. <br>
+    Together, we can redefine the path from discovery to delivery, and ensure that no patient <br> has to wait longer than necessary for the treatments they need.</p>
+</div>
+
+<!-- Section 2 -->
+<div class="section-2">
+    <div class="left-content">
+        <h2>Interested in partnering with us <br>on our mission?</h2>
+        <p>Drop us a line--we'd love to hear from you!</p>
+    </div>
+
+    <div class="right-content">
+        <div class="box box1">
+          <h3>Work With Us</h3>
+            <p>Contact us to learn more <br>about us or for a detailed <br>consult of your requirements.</p>
+            <a href="#" class="btn">Request a consult</a>
+        </div>
+        <div class="box box2">
+           <h3>Stay up to Date</h3>
+<p>Discover how we apply our <br> technology and create  <br>revolution.</p>
+            <a href="#" class="btn">Click Me</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- form section -->
+ <!-- Section with custom class -->
+ <div class="custom-section">
+  <!-- Left Content with unique class -->
+  <div class="custom-left-content">
+      <h1>Get in Touch</h1>
+      <h3>We'd love to hear from you</h3>
+      <p>If you have any questions or need assistance, feel free to fill out the form on the right, and we'll get back to you as soon as possible!</p>
+  </div>
+
+  <!-- Right Content: Form with unique class -->
+  <div class="custom-right-content">
+      <form action="#" method="POST" class="custom-form">
+          <div class="form-row">
+              <div>
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+              </div>
+              <div>
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+              </div>
+          </div>
+
+          <label for="email">Email ID</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="help">How can we help you?</label>
+          <textarea id="help" name="help" placeholder="Describe your query or request" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+</div>
+
+<!-- footer -->
+ <!-- Footer Section -->
+ <footer class="footer">
+  <div class="footer-content">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+          <img src="./assets/images/footerlogo.png" alt="Logo" class="logo-img">
+      </div>
+
+      <!-- Capabilities List -->
+      <div class="footer-list">
+          <h3>Capabilities</h3>
+          <ul>
+              <li><a href="#">AI in Healthcare</a></li>
+              <li><a href="#">Big Data</a></li>
+              <li><a href="#">US & Global Healthcare</a></li>
+          </ul>
+      </div>
+
+      <!-- About Us List -->
+      <div class="footer-list">
+          <h3>About Us</h3>
+          <ul>
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+          </ul>
+      </div>
+
+      <!-- Real-Time List -->
+      <div class="footer-list">
+          <h3>Real-Time</h3>
+          <ul>
+              <li><a href="#">Real-Time Analytics</a></li>
+              <li><a href="#">Live Data Integration</a></li>
+          </ul>
+      </div>
+
+      <!-- Connect List -->
+      <div class="footer-list">
+          <h3>Connect</h3>
+          <ul>
+              <li><a href="mailto:info@thesymetrique.com">Email: info@thesymetrique.com</a></li>
+              <li><a href="request-consult.html">Request a Consult</a></li>
+              <li><a href="#">Get in Touch</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+    <script src="Aboutus.js"></script>
+</body>
+</html>
