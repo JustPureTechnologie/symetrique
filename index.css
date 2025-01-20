@@ -10,7 +10,6 @@ html, body {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
 }
-
 /* Navbar */
 .navbar {
   display: flex;
@@ -21,13 +20,13 @@ html, body {
   left: 0;
   right: 0;
   padding: 20px;
-  background-color: transparent;
+ 
   z-index: 10;
   transition: background-color 0.3s;
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #ffffff;
 }
 
 .navbar .logo a {
@@ -37,10 +36,11 @@ html, body {
 }
 
 .navbar .logo-img {
-  height: 40px;
-  width: auto;
+  height: 40px; /* Adjust height as needed */
+  width: auto;  /* Maintain aspect ratio */
 }
 
+/* Adjust nav-links container to align items properly */
 .navbar .nav-links {
   display: flex;
   gap: 30px;
@@ -48,14 +48,15 @@ html, body {
 }
 
 .navbar .nav-links a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-size: 16px;
 }
 
 .navbar .nav-links a:hover {
-  color: #03567F;
+  color: #5fc5f8;
 }
+
 
 /* Slideshow */
 .slideshow-container {
@@ -103,13 +104,14 @@ html, body {
 }
 
 p {
+  color: #000000;
   font-size: 23px;
   margin-bottom: 20px;
 }
 
 .buttons {
   display: flex;
-  gap: 10px;
+  gap: 40px;
 }
 
 .btn {
@@ -124,6 +126,11 @@ p {
 
 .btn:hover {
   background-color: #024d6a;
+}
+
+/* Enable smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
 /* New Page Section */
@@ -258,6 +265,7 @@ p {
   font-size: 36px;
   color: #070c0b; /* Green color */
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .approach-hr {
@@ -452,16 +460,23 @@ p {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allows items to stack on smaller screens */
-  gap: 20px;
+  align-items: center;  /* Ensures items are aligned vertically in the center */
+  flex-wrap: nowrap; /* Prevent items from stacking */
+  gap: 40px;  /* Equal spacing between all items */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* Logo Section */
+.footer-logo {
+  padding-right: 20px; /* Adds right padding for logo */
+}
+
 .footer-logo .logo-img {
   width: 150px; /* Adjust logo size as needed */
   height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /* Footer List Sections */
@@ -500,17 +515,17 @@ p {
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
   .footer-content {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row; /* Keep the items in a row even on smaller screens */
+      gap: 20px; /* Ensure consistent gap between items */
       text-align: left;
   }
 
   .footer-list {
-      min-width: 100%;
-      margin-bottom: 20px;
+      min-width: 200px; /* Allow the lists to shrink but stay in a row */
   }
 
   .footer-logo {
-      margin-bottom: 20px;
+      margin-bottom: 0; /* Keep logo aligned with lists */
+      padding-right: 0; /* Remove any extra padding */
   }
 }

@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Initially black background with transparency */
+    background-color: rgb(255, 255, 255); /* Initially black background with transparency */
     z-index: 10;
     transition: background-color 0.3s, padding 0.3s;
     font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
@@ -17,8 +17,8 @@
   
   /* When scrolled */
   .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 1); /* Solid black when scrolled */
-    padding: 15px 20px; /* Adjust padding when scrolled, if desired */
+    background-color: rgb(255, 255, 255); /* Solid black when scrolled */
+    /* padding: 15px 20px; Adjust padding when scrolled, if desired */
   }
   
   /* Logo Styling */
@@ -32,7 +32,10 @@
     height: 40px;
     width: auto;
   }
-  
+  .navbar .logo-img{
+    height: 40px;
+    width:auto;
+  }
   /* Navbar Links */
   .navbar .nav-links {
     display: flex;
@@ -41,7 +44,7 @@
   }
   
   .navbar .nav-links a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif; /* Set Montserrat font */
@@ -56,45 +59,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Navbar Styling */
-.navbar {
-    background-color: #333;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
-
-.navbar .logo a {
-    color: white;
-    font-size: 1.8rem;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.nav-links a:hover {
-    color: #f39c12; /* Hover effect */
 }
 
 /* Header Section with Background */
@@ -346,7 +310,7 @@ body {
 }
  /* form */
  /* Section with unique class */
- .custom-section {
+ #custom-section {
     background-color: #03567F; /* Blue background */
     padding: 80px;
     display: flex;
@@ -398,11 +362,15 @@ body {
     width: 48%; /* Each input will take up 48% of the width */
 }
 
+label {
+    font-family: 'Montserrat', sans-serif;
+}
 .custom-form input,
 .custom-form textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     width: 100%;
     background-color: white; /* White background for textboxes */
@@ -411,6 +379,7 @@ body {
 .custom-form button {
     padding: 12px;
     background-color: #03567F;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     border: none;
     border-radius: 5px;
@@ -422,78 +391,85 @@ body {
     background-color: #0281A2; /* Slightly darker shade */
 }
   /* footer */
-    /* Footer Styling */
-    .footer {
-        background-color: white;
-        color: black;
-        font-family: 'Montserrat', sans-serif;
-        border-top: 2px solid black;
-        padding: 40px 20px;
-    }
-    
+/* Footer Styling */
+.footer {
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 2px solid black;
+    padding: 40px 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Ensures items are aligned vertically in the center */
+    flex-wrap: nowrap; /* Prevent items from stacking */
+    gap: 40px;  /* Equal spacing between all items */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Logo Section */
+  .footer-logo {
+    padding-right: 20px; /* Adds right padding for logo */
+  }
+  
+  .footer-logo .logo-img {
+    width: 150px; /* Adjust logo size as needed */
+    height: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  /* Footer List Sections */
+  .footer-list {
+    flex: 1; /* Distribute space equally */
+    min-width: 220px;
+  }
+  
+  /* Footer List Headings */
+  .footer-list h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  /* Footer List Items */
+  .footer-list ul {
+    list-style-type: none;
+  }
+  
+  .footer-list ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-list ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-list ul li a:hover {
+    color: #03567F;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
     .footer-content {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; /* Allows items to stack on smaller screens */
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
+        flex-direction: row; /* Keep the items in a row even on smaller screens */
+        gap: 20px; /* Ensure consistent gap between items */
+        text-align: left;
     }
-    
-    /* Logo Section */
-    .footer-logo .logo-img {
-        width: 150px; /* Adjust logo size as needed */
-        height: auto;
-    }
-    
-    /* Footer List Sections */
+  
     .footer-list {
-        flex: 1; /* Distribute space equally */
-        min-width: 220px;
+        min-width: 200px; /* Allow the lists to shrink but stay in a row */
     }
-    
-    /* Footer List Headings */
-    .footer-list h3 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        font-weight: 500;
+  
+    .footer-logo {
+        margin-bottom: 0; /* Keep logo aligned with lists */
+        padding-right: 0; /* Remove any extra padding */
     }
-    
-    /* Footer List Items */
-    .footer-list ul {
-        list-style-type: none;
-    }
-    
-    .footer-list ul li {
-        margin-bottom: 10px;
-    }
-    
-    .footer-list ul li a {
-        text-decoration: none;
-        color: black;
-        font-size: 14px;
-        transition: color 0.3s ease;
-    }
-    
-    .footer-list ul li a:hover {
-        color: #03567F;
-    }
-    
-    /* Responsive Design for smaller screens */
-    @media (max-width: 768px) {
-        .footer-content {
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-        }
-    
-        .footer-list {
-            min-width: 100%;
-            margin-bottom: 20px;
-        }
-    
-        .footer-logo {
-            margin-bottom: 20px;
-        }
-    }
-    
+  }
+  
